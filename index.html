@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Invoice Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <center>
+        <h1>INVOICE GENERATOR</h1>
+        <div id="form-container">
+            <form id="invoice-form">
+                <label for="customer-name">Customer Name:</label><br>
+                <input type="text" id="customer-name" name="customer-name" required><br><br>
+
+                <label for="customer-address">Customer Address:</label><br>
+                <textarea id="customer-address" name="customer-address" required></textarea><br><br>
+
+                <label for="salesperson">Salesperson:</label><br>
+                <input type="text" id="salesperson" name="salesperson" required><br><br>
+
+                <label for="payment-terms">Payment Terms:</label><br>
+                <input type="text" id="payment-terms" name="payment-terms" value="Due upon receipt" required><br><br>
+
+                <h2>ITEM DETAILS</h2>
+                <div id="items-container">
+                    <div class="item">
+                        <label for="item-description-0">Item Description:</label><br>
+                        <input type="text" id="item-description-0" name="item-description[]" required><br>
+
+                        <label for="item-quantity-0">Quantity:</label><br>
+                        <input type="number" id="item-quantity-0" name="item-quantity[]" value="1" min="1" required><br>
+
+                        <label for="item-price-0">Price per Unit:</label><br>
+                        <input type="number" id="item-price-0" name="item-price[]" step="0.01" min="0" required><br><br>
+                    </div>
+                </div>
+                <button type="button" id="add-item">Add Item</button><br><br>
+
+                <label for="tax-rate">Tax Rate (%):</label><br>
+                <input type="number" id="tax-rate" name="tax-rate" value="0" step="0.01" min="0" required><br><br>
+
+                <button type="submit">GENERATE</button>
+            </form>
+        </div>
+
+        <div id="invoice-container" style="display:none;">
+            <div id="invoice">
+                <h2 id="invoice-title">INVOICE</h2>
+                <div id="invoice-header">
+                    <p><strong>INVOICE GENERATOR</strong></p>
+                    <p>Make all checks payable to Vimal</p>
+                </div>
+                <div id="invoice-details"></div>
+                <table id="invoice-items">
+                    <thead>
+                        <tr>
+                            <th>DESCRIPTION:</th>
+                            <th>QUANTITY:</th>
+                            <th>UNIT PRICE:</th>
+                            <th>LINT TOTAL:</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+                <div id="invoice-totals"></div>
+                <div id="invoice-footer">
+                    <p>7904438019</p>
+                    <p>vimalvijendran54@gmail.com</p>
+                    <p>Thiruvaiyaru,Thanjavur,Tamil Nadu, India</p>
+                </div>
+            </div>
+            <button id="print-invoice">PRINT</button>
+            <button id="download-invoice">Download</button>
+        </div>
+    </center>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+body {
+    font-family: Arial, sans-serif;
+    background:  linear-gradient(to right, #e753e2, #2575fc);
+    margin: 50;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.form-container{
+    background:  linear-gradient(to right, #e7e5e7, #39404c);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    width: 100%;
+}
+
+#invoice {
+    border: 3px solid #000000; 
+    padding: 30px;
+    width: 80%;
+    margin: 30px auto;
+    background-color: #2c53d5;
+}
+
+#invoice-header,
+#invoice-footer {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#invoice-items {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #9900ff;
+}
+
+#invoice-items th,
+#invoice-items td {
+    border: 1px solid #00747f;
+    padding: 9px;
+    text-align: center;
+}
+
+#invoice-totals {
+    margin-top: 20px;
+    text-align: right;
+}
+
+button {
+    margin: 10px;
+}
